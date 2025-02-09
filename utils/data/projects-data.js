@@ -7,7 +7,7 @@ export const projectsData = [
     {
         id: 1,
         name: 'Personal Portfolio',
-        description: "Me and my team built an AI-powered financial mobile application. I have developed API using Express, Typescript, OpenAI, AWS, and MongoDB. Used OTP via AWS SES, Google, and Facebook for the authentication system. Built AI assistants using OpenAI's latest model and trained using our dataset. Voice messages are converted to text using AWS Transcribe. The app fetches data from Google Sheets and generates a PDF term sheet, sent via AWS SES.",
+        description: "My personal portfolio website is built using Next.js and Tailwind CSS, designed with a sleek and modern dark mode interface. The site is fully responsive, ensuring a seamless user experience across all devices. Leveraging the power of Next.js, the portfolio benefits from server-side rendering (SSR) for optimal performance and SEO. The UI is crafted with Tailwind CSS, allowing for a clean and minimalistic design that enhances readability and accessibility. The contact form is integrated with Nodemailer, enabling direct email communication without relying on third-party services. With a focus on performance and efficiency, the website incorporates lazy loading and optimized assets to deliver a smooth browsing experience. This portfolio serves as a central hub to showcase my skills, projects, and experience while continuously evolving as I refine my expertise in web development.",
         tools: [ 'NextJS','Tailwind CSS','SCSS','Node Mailer'],
         role: 'Full Stack Developer',
         code: '',

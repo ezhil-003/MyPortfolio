@@ -34,11 +34,16 @@ function ContactForm() {
     };
 
     try {
+      console.log(userInput);
       setIsLoading(true);
-      const res = await axios.post(
-        `${process.env.NEXT_PUBLIC_APP_URL}/api/contact`,
-        userInput
-      );
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(userInput),  // <-- This was missing
+      });
+      
 
       toast.success("Message sent successfully!");
       setUserInput({

@@ -31,34 +31,126 @@ const transporter = nodemailer.createTransport({
 
 // HTML email template
 const generateEmailTemplate = (name, email, userMessage) => `
-  <div style="font-family: Arial, sans-serif; color: #333; padding: 20px; background-color: #f4f4f4;">
-    <div style="max-width: 600px; margin: auto; background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);">
-      <h2 style="color: #007BFF;">New Message Received</h2>
-      <p><strong>Name:</strong> ${name}</p>
-      <p><strong>Email:</strong> ${email}</p>
-      <p><strong>Message:</strong></p>
-      <blockquote style="border-left: 4px solid #007BFF; padding-left: 10px; margin-left: 0;">
-        ${userMessage}
-      </blockquote>
-      <p style="font-size: 12px; color: #888;">Click reply to respond to the sender.</p>
+<div style="
+  font-family: 'Segoe UI', Arial, sans-serif;
+  color: #2d3748;
+  padding: 30px 0;
+  background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+">
+  <div style="
+    max-width: 600px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+  ">
+    <!-- Header with Gradient -->
+    <div style="
+      background: linear-gradient(45deg, #3b82f6 0%, #6366f1 100%);
+      padding: 30px;
+      text-align: center;
+    ">
+    
+     <div style="position: relative; z-index: 2;">
+        <h1 style="
+          color: white;
+          margin: 0;
+          font-size: 28px;
+          font-weight: 600;
+          letter-spacing: 0.5px;
+          text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        ">
+          Some Body Wants to Ping You!! 
+        </h1>
+      </div>
+    </div>
+
+    <!-- Content Area -->
+    <div style="padding: 30px;">
+      <div style="
+        background: #f8fafc;
+        border-radius: 8px;
+        padding: 20px;
+        margin-bottom: 25px;
+      ">
+        <div style="display: flex; align-items: center; margin-bottom: 15px;">
+          <div>
+            <h2 style="margin: 0; color: #1e293b; font-size: 20px;">${name}</h2>
+            <p style="margin: 0; color: #64748b; font-size: 14px;">${email}</p>
+          </div>
+        </div>
+
+        <div style="
+          background: white;
+          border-left: 4px solid #3b82f6;
+          padding: 15px;
+          border-radius: 4px;
+          margin: 15px 0;
+        ">
+          <p style="
+            margin: 0;
+            color: #475569;
+            line-height: 1.6;
+            font-size: 15px;
+          ">${userMessage}</p>
+        </div>
+      </div>
+
+      <!-- Reply Button -->
+      <div style="text-align: center; margin-top: 25px;">
+        <a href="mailto:${email}" 
+           style="
+             display: inline-block;
+             background: linear-gradient(45deg, #ec4899 0%, #8b5cf6 100%);
+             color: white;
+             padding: 12px 30px;
+             border-radius: 6px;
+             text-decoration: none;
+             font-weight: 500;
+             transition: transform 0.2s ease;
+           "
+           onmouseover="this.style.transform='translateY(-2px)'"
+           onmouseout="this.style.transform='none'">
+          Reply to ${name.split(' ')[0]}
+        </a>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div style="
+      background: #f1f5f9;
+      padding: 20px;
+      text-align: center;
+      color: #64748b;
+      font-size: 12px;
+    ">
+      <p style="margin: 5px 0;">© ${new Date().getFullYear()} Ezhil Sivaraj SR</p>
+      <p style="margin: 5px 0;">Trichy, Tamil Nadu, India.</p>
     </div>
   </div>
+</div>
 `;
 
 // Helper function to send an email via Nodemailer
 async function sendEmail(payload, message) {
   const { name, email, message: userMessage } = payload;
+
+  const capitalizedname  = name.toUpperCase()
   
   const mailOptions = {
     from: "Portfolio", 
     to: process.env.EMAIL_ADDRESS, 
-    subject: `New Message From ${name}`, 
+    subject: `${capitalizedname} wants to ping you`, 
     text: message, 
     html: generateEmailTemplate(name, email, userMessage), 
     replyTo: email, 
   };
+
+
   
   try {
+    console.log(process.env.EMAIL_ADDRESS);
     await transporter.sendMail(mailOptions);
     return true;
   } catch (error) {
@@ -70,7 +162,7 @@ async function sendEmail(payload, message) {
 export async function POST(request) {
   try {
     const payload = await request.json();
-    const { name, email, message: userMessage } = payload;
+    const { name, email, message} = payload;
     // const token = process.env.TELEGRAM_BOT_TOKEN;
     // const chat_id = process.env.TELEGRAM_CHAT_ID;
 

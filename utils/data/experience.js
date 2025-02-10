@@ -2,7 +2,7 @@ export const experiences = [
   {
     id: 1,
     title: 'FullStack Developer Intern',
-    company: "University Informatics Center (UIC), Bharathidasan University",
+    company: "University Informatics Center (UIC), Bharathidasan University.",
     duration: "(Sep 2023 - Feb 2024)"
   },
   // {

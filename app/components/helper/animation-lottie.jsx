@@ -1,19 +1,27 @@
-"use client";
+"use client"; // Add this at top for client components
 
-import Lottie from "lottie-react";
+import { useRef, useEffect } from 'react';
+import dynamic from 'next/dynamic';
+const LottieComponent = dynamic(() => import('lottie-react'), {
+  ssr: false,
+});
 
-const AnimationLottie = ({ animationPath, width }) => {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationPath,
-    style: {
-      width: '95%',
-    }
-  };
+const AnimationLottie = ({ animationPath }) => {
+  
+
+  // useEffect(() => {
+  //   // Client-side only code
+  //   if (typeof window !== 'undefined') {
+  //     // Your animation initialization code
+  //   }
+  // }, []);
 
   return (
-    <Lottie {...defaultOptions} />
+    <LottieComponent
+      animationData={animationPath}
+      loop={true}
+      autoplay={true}
+    />
   );
 };
 

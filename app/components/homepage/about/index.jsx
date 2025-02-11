@@ -27,8 +27,8 @@ function AboutSection() {
             <Image
               src={personalData.profile}
               alt="Ezhil Sivaraj SR"
-              layout="fill"
-              objectFit="cover" // Ensures the image covers the square area
+              fill
+              style={{objectFit:'cover'}} // Ensures the image covers the square area
               className="rounded-lg transition-all duration-1000 grayscale hover:grayscale-0 hover:scale-110 cursor-pointer"
             />
           </div>

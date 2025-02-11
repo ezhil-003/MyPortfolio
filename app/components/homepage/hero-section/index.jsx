@@ -4,7 +4,8 @@ import { personalData } from "@/utils/data/personal-data";
 import Image from "next/image";
 import Link from "next/link";
 import { BsGithub, BsLinkedin } from "react-icons/bs";
-import { FaFacebook, FaTwitterSquare } from "react-icons/fa";
+import { FaFacebook, FaTwitterSquare,  } from "react-icons/fa";
+import { FaXTwitter } from "react-icons/fa6";
 import { MdDownload } from "react-icons/md";
 import { RiContactsFill } from "react-icons/ri";
 import { SiLeetcode } from "react-icons/si";
@@ -59,14 +60,15 @@ function HeroSection() {
             {/*  className="transition-all text-pink-500 hover:scale-125 duration-300"*/}
             {/*>*/}
             {/*  <SiLeetcode size={30} />*/}
-            {/*</Link>*/}
-            {/*<Link*/}
-            {/*  href={personalData.twitter}*/}
-            {/*  target='_blank'*/}
-            {/*  className="transition-all text-pink-500 hover:scale-125 duration-300"*/}
-            {/*>*/}
-            {/*  <FaTwitterSquare size={30} />*/}
-            {/*</Link>*/}
+            {/* </Link> */}
+            <Link
+             href={personalData.twitter}
+             target='_blank'
+             className="transition-all text-pink-500 hover:scale-125 duration-300"
+            >
+             <FaXTwitter
+              size={30} />
+            </Link>
           </div>
 
           <div className="flex items-center gap-3">
@@ -154,12 +156,18 @@ function HeroSection() {
               </div>
               <div>
                 <span className="ml-4 lg:ml-8 mr-2 text-green-400">hireable:</span>
-                <span className="text-orange-400">function</span>
-                <span className="text-gray-400">{'() {'}</span>
+                {/* <span className="text-orange-400">function</span> */}
+                <span className="text-gray-400">{'() => {'}</span>
               </div>
               <div>
                 <span className="ml-8 lg:ml-16 mr-2 text-orange-400">return</span>
                 <span className="text-gray-400">{`(`}</span>
+              </div>
+              <div>
+                <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>
+                <span className="mr-2 text-white">readyToWork</span>
+                <span className="text-amber-300 mr-2">=</span>
+                <span className="text-orange-400">{personalData.status}</span>
               </div>
               <div>
                 <span className="ml-12 lg:ml-24 text-cyan-400">this.</span>

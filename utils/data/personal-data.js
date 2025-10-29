@@ -2,7 +2,21 @@ export const personalData = {
   name: "EZHIL SIVARAJ SR",
   profile: '/profile.png',
   designation: "Software Developer",
-  description: "Hello! I’m Ezhil Sivaraj, a passionate and self-driven Full Stack Developer with expertise in the MERN stack, and scalable web applications. While I may be a fresher, I’ve gained hands-on experience through independent projects and internships, working on real-world applications that solve complex problems.\n\n My journey into software development started with a deep curiosity for building efficient and user-friendly applications. \n\n Apart from coding, I enjoy exploring new technologies, experimenting with GoLang and Rust, and working on personal projects that push my problem-solving skills. My portfolio is a reflection of my growth, creativity, and ability to turn ideas into reality. \n\n I’m always eager to collaborate, learn, and create impactful solutions. If you’re interested in working together or just want to chat about tech, feel free to connect with me!",
+  description: "Hello! I’m Ezhil Sivaraj, a Full Stack Developer passionate about building scalable, type-safe, and modern web applications that bridge creativity and technology.
+
+\n\n 💼 Over the past year, I’ve worked with Galaxy Technology Services as a Full Stack Developer Intern, contributing to an AI-powered text processing web app 🧠 that extracts meaningful context from text-based documents.
+I built the frontend architecture using Next.js (T3 Stack on Bun), leveraging tRPC, Prisma ORM, PostgreSQL, and Azure Cloud to deliver fast, reliable, and production-ready systems.
+
+\n\n ⚙️ My work extends beyond just writing code — I’ve collaborated with backend teams to optimize API performance, managed deployments across AWS and Azure, and even mentored trainees, helping them grow into capable developers.
+
+\n\n 💻 My journey into software development began with a simple curiosity — how things work behind the screen. That curiosity evolved into a passion for crafting intuitive, efficient, and elegant digital experiences through code.
+
+\n\n 🚀 I love exploring new technologies, especially GoLang, Rust, and emerging cloud-native tools, constantly experimenting to push my technical boundaries.
+
+\n\n 🌐 Outside of code, I enjoy writing tech blogs, sharing insights on development practices, and continuously learning to become a better engineer every day.
+
+\n\n ✨ I’m always open to collaborations, open-source contributions, and innovative projects that challenge conventional thinking.
+\n\n Let’s connect and build something remarkable together.",
   email: 'srezhilsivaraj@gmail.com',
   phone: '+91 9361201687',
   address: 'Trichy, Tamilnadu, India - 620001 ',

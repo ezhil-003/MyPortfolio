@@ -72,8 +72,18 @@ import vuetifyjs from '/public/svg/skills/vuetifyjs.svg';
 import webix from '/public/svg/skills/webix.svg';
 import wolframalpha from '/public/svg/skills/wolframalpha.svg';
 import wordpress from '/public/svg/skills/wordpress.svg';
-import bun from '/public/svg/skills/bunlogo.svg'
-import hono from '/public/svg/skills/hono-seeklogo.svg'
+import bun from '/public/svg/skills/bunlogo.svg';
+import hono from '/public/svg/skills/hono-seeklogo.svg';
+import postman from '/public/svg/skills/postman.svg';
+import trpc from '/public/svg/skills/trpc.svg';
+import t3Stack from '/public/svg/skills/t3-stack.svg';
+import vitest from '/public/svg/skills/vitest.svg';
+import shadcn from '/public/svg/skills/shadcn-ui.svg';
+import prisma from '/public/svg/skills/prisma.svg';
+import playwright from '/public/svg/skills/playwright.svg';
+import reactquery from '/public/svg/skills/react-query.svg';
+import betterauth from '/public/svg/skills/better-auth.svg';
+import tanstack from '/public/svg/skills/tanstack.svg';
 
 
 export const skillsImage = (skill) => {
@@ -231,6 +241,26 @@ export const skillsImage = (skill) => {
       return bun;
     case 'hono':
       return hono;
+    case 'postman':
+      return postman;
+    case 'trpc':
+      return trpc
+    case 't3 stack':
+      return t3Stack;
+    case 'vitest':
+      return vitest;
+    case 'shadcn':
+      return shadcn;
+    case 'prisma':
+      return prisma
+    case 'playwright':
+      return playwright;
+    case 'react query':
+      return reactquery;
+    case 'better-auth':
+      return betterauth;
+    case 'tanstack':
+      return tanstack;
     default:
       break;
   }

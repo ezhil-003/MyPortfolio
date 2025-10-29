@@ -7,8 +7,9 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Self Employed",
-    company: "Code and build something in everyday.",
-    duration: "(Jan 2022 - Present)"
-  }
+    title: "Full Stack Developer Intern",
+    company: "Galaxy Technology Services Pvt Ltd.",
+    duration: "(June 2024 - Oct 2025)"
+  },
 ]
+

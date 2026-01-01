@@ -28,6 +28,6 @@ Let’s connect and build something remarkable together.`,
   // stackOverflow: '',
   // leetcode: "",
   devUsername: "ezhil_sivarajsr",
-  resume: "https://drive.google.com/file/d/1nHBNStP4DiCHWXe__Q6FRecbfpeb1MFs/view?usp=sharing",
+  resume: "https://drive.google.com/file/d/1gJ16Xp47ItIL3EPCOuR6IwCEg_tdnNky/view?usp=sharing",
   status:"true"
 }

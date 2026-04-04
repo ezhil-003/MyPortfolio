@@ -7,7 +7,7 @@ export const experiences = [
   },
   {
     id: 2,
-    title: "Full Stack Developer Intern",
+    title: "Full Stack Developer",
     company: "Galaxy Technology Services Pvt Ltd.",
     duration: "(June 2024 - Oct 2025)"
   },
